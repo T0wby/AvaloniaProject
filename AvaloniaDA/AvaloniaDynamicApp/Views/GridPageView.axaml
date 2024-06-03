@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templates="using:AvaloniaDynamicApp.Templates"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaDynamicApp.Views.GridPageView">
+  <ScrollViewer>
+    <StackPanel Margin="20">
+      <TextBlock Margin="0 20" FontSize="20" FontWeight="Bold">Grids</TextBlock>
+      <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Standard Grid</TextBlock>
+      <templates:ContentExample>
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*"  Margin="4" ShowGridLines="True"
+              Height="400" Width="400">
+          <Rectangle Grid.Row="0" Grid.Column="0" Margin="4" Fill="AliceBlue"/>
+          <Rectangle Grid.Row="0" Grid.Column="1" Margin="4" Fill="Aquamarine"/>
+          <Rectangle Grid.Row="1" Grid.Column="0" Margin="4" Fill="DarkGray"/>
+          <Rectangle Grid.Row="1" Grid.Column="1" Margin="4" Fill="Black"/>
+        </Grid>
+      </templates:ContentExample>
+
+      <TextBlock Margin="0 20" FontSize="15" FontWeight="Bold">Standard Grid Code</TextBlock>
+      <StackPanel>
+        <Button Click="Start_OnClick" Margin="0 0 0 5">Start</Button>
+        <Button Click="Start_OnClick_Ripple" Margin="0 0 0 5">StartRipple</Button>
+        <Button Click="Stop_OnClick" Margin="0 0 0 5">Stop</Button>
+      </StackPanel>
+
+      <templates:ContentExample>
+        <Grid Name="CodeGrid"  Margin="4">
+        </Grid>
+      </templates:ContentExample>
+    </StackPanel>
+    
+  </ScrollViewer>
+  
+</UserControl>

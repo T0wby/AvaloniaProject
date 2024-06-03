@@ -15,7 +15,7 @@ namespace AvaloniaDynamicApp.ViewModels
         private string _title = "Welcome to Avalonia!";
         private bool _paneOpen = true;
         private int _paneLength = 200;
-        private int _compactPaneLength = 48;
+        private int _compactPaneLength = 46;
         private ViewModelBase _currentPage = new HomePageViewModel();
         private ListItemTemplate _selectedListItem;
 
@@ -50,6 +50,8 @@ namespace AvaloniaDynamicApp.ViewModels
             new ListItemTemplate(typeof(TextPageViewModel), "book_letter_regular"),
             new ListItemTemplate(typeof(ValueSelectionPageViewModel), "select_all_off_regular"),
             new ListItemTemplate(typeof(ImagePageViewModel), "image_regular"),
+            new ListItemTemplate(typeof(GridPageViewModel), "grid_regular"),
+            new ListItemTemplate(typeof(DragAndDropPageViewModel), "drag_regular"),
         };
         public ListItemTemplate SelectedListItem { get => _selectedListItem; set => this.RaiseAndSetIfChanged(ref _selectedListItem, value); }
 
